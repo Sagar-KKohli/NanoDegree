@@ -46,8 +46,9 @@ jobs:
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
   say-hello-workflow:
-    jobs:
-      - print-hello
+    jobs:      
       - print-world
       - say-hello
+    requires:
+      - print-hello
       
