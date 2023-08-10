@@ -49,11 +49,12 @@ workflows:
     jobs: 
       - print-hello     
       - print-world
-          requires:
-            - print-hello
+          requires
+            print-hello
       - say-hello
-          requires:
-            - print-world
+          requires
+            print-hello
+            print-world
             
       
       
