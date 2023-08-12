@@ -2,7 +2,10 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
-# Define a job to be invoked later in a workflow.
+orbs:
+  # Declare a dependency on the welcome-orb
+  welcome: circleci/welcome-orb@0.4.1
+# Orchestrate or schedule a set of jobs
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   print-hello:
@@ -47,8 +50,8 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs: 
-      - print-hello   
-      - print-world         
+      - print-hello         
+      - print-world                 
       - say-hello
           
             
