@@ -54,7 +54,7 @@ workflows:
       - print-world:
           requires:
             - print_hello                 
-      - say-hello
+      - say-hello:
           requires:
             - print_hello
             - print-world
