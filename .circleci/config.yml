@@ -17,9 +17,9 @@ jobs:
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
       - checkout
-      - run:
-          name: "print hello"
-          command: "echo Hello, "  > ~/output.txt
+      - run: 
+          name: "print hello" 
+          command: echo "Hello, "  > ~/output.txt
       - persist_to_workspace:
           root: ~/
           paths:
